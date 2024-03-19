@@ -1,5 +1,6 @@
 from setuptools import setup, find_packages
 
+# refactor: revisit later
 # todo: improve this
 setup(
     name="chunkflow",
