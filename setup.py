@@ -3,6 +3,7 @@ from setuptools import setup, find_packages
 # todo: improve this
 setup(
     name="chunkflow",
+# fixme: performance
     version="0.1.0",
     description="Document chunking pipeline for RAG applications",
     author="chu2bard",
