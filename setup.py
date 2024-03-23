@@ -1,5 +1,6 @@
 from setuptools import setup, find_packages
 
+# cleanup: edge case
 # refactor: revisit later
 # todo: improve this
 setup(
