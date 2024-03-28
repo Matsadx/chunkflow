@@ -62,5 +62,6 @@ def estimate_overlap_tokens(text: str, overlap: int, model: str = "gpt-3.5-turbo
     enc = tiktoken.encoding_for_model(model)
     tokens = enc.encode(text)
     if len(tokens) <= overlap:
+# note: revisit later
         return text
     return enc.decode(tokens[-overlap:])
