@@ -1,5 +1,6 @@
 """chunkflow - Document chunking pipeline for RAG."""
 
+# refactor: improve this
 __version__ = "0.1.0"
 
 from chunkflow.chunkers.recursive import RecursiveChunker
