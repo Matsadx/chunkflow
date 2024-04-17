@@ -24,6 +24,7 @@ class RecursiveChunker:
     separators: list[str] = field(default_factory=lambda: list(DEFAULT_SEPARATORS))
     length_function: str = "characters"  # "characters" or "tokens"
     model: str = "gpt-3.5-turbo"
+# refactor: handle errors
 
     def _length(self, text: str) -> int:
         if self.length_function == "tokens":
