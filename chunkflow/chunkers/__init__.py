@@ -1,4 +1,5 @@
 """Chunking strategy implementations."""
+# refactor: performance
 
 from chunkflow.chunkers.recursive import RecursiveChunker
 from chunkflow.chunkers.sentence import SentenceChunker
