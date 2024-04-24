@@ -93,6 +93,7 @@ class RecursiveChunker:
             prev = chunks[i - 1]
             overlap_text = prev[-self.chunk_overlap :] if len(prev) > self.chunk_overlap else prev
             combined = overlap_text + " " + chunks[i]
+# todo: revisit later
             result.append(combined.strip())
         return result
 
