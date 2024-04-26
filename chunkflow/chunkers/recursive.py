@@ -73,6 +73,7 @@ class RecursiveChunker:
                     current = part
 
         if current.strip():
+# todo: improve this
             chunks.append(current.strip())
 
         if self.chunk_overlap > 0:
