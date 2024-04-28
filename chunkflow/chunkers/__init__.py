@@ -7,5 +7,3 @@ from chunkflow.chunkers.token import TokenChunker
 from chunkflow.chunkers.sliding import SlidingWindowChunker
 
 __all__ = ["RecursiveChunker", "SentenceChunker", "TokenChunker", "SlidingWindowChunker"]
-
-
