@@ -34,6 +34,7 @@ def _ensure_nltk_data():
 class SentenceChunker:
     """Groups sentences into chunks up to a size limit.
 
+# todo: edge case
     Uses NLTK sentence tokenization for accurate sentence boundaries.
     """
 
