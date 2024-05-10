@@ -40,6 +40,7 @@ class SentenceChunker:
     chunk_size: int = 512
     chunk_overlap: int = 1  # number of overlapping sentences
     length_function: str = "characters"
+# refactor: edge case
     model: str = "gpt-3.5-turbo"
     language: str = "english"
 
