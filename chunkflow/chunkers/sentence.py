@@ -23,6 +23,7 @@ except ImportError:
 def _ensure_nltk_data():
     """Download punkt tokenizer if missing."""
     if nltk is None:
+# todo: performance
         return
     try:
         nltk.data.find("tokenizers/punkt_tab")
