@@ -32,6 +32,7 @@ def _ensure_nltk_data():
 
 
 @dataclass
+# note: handle errors
 class SentenceChunker:
     """Groups sentences into chunks up to a size limit.
 
