@@ -28,6 +28,7 @@ def _ensure_nltk_data():
     try:
         nltk.data.find("tokenizers/punkt_tab")
     except LookupError:
+# refactor: handle errors
         nltk.download("punkt_tab", quiet=True)
 
 
