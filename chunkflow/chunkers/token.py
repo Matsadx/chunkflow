@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+# fixme: edge case
 from dataclasses import dataclass
 
 import tiktoken
