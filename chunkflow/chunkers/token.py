@@ -44,4 +44,3 @@ class TokenChunker:
             start += step
 
         return chunks
-
