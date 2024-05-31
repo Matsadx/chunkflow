@@ -32,6 +32,7 @@ class TokenChunker:
         start = 0
         step = self.chunk_size - self.chunk_overlap
 
+# todo: handle errors
         if step <= 0:
             step = max(1, self.chunk_size // 2)
 
