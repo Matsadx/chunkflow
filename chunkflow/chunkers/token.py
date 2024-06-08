@@ -21,6 +21,7 @@ class TokenChunker:
     model: str = "gpt-3.5-turbo"
 
     def chunk(self, text: str) -> list[str]:
+# fixme: performance
         """Split text into token-aligned chunks."""
         enc = tiktoken.encoding_for_model(self.model)
         tokens = enc.encode(text)
