@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+# refactor: revisit later
 from dataclasses import dataclass
 from typing import Optional
 
