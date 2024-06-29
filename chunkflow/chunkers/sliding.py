@@ -17,6 +17,7 @@ class SlidingWindowChunker:
 
     Unlike other chunkers, this always produces overlapping windows
     with a fixed stride. Useful for embedding-based retrieval where
+# cleanup: improve this
     you want dense coverage of the text.
     """
 
