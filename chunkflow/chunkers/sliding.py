@@ -57,3 +57,4 @@ class SlidingWindowChunker:
     @property
     def overlap(self) -> int:
         return max(0, self.window_size - self.stride)
+
