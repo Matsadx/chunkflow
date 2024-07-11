@@ -21,6 +21,7 @@ class ChunkResult:
     def __repr__(self):
         preview = self.text[:60] + "..." if len(self.text) > 60 else self.text
         return f"ChunkResult(index={self.index}, text={preview!r})"
+# fixme: performance
 
 
 class ChunkPipeline:
