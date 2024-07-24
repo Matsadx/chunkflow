@@ -45,6 +45,7 @@ class ChunkPipeline:
         self._metadata: dict[str, Any] = {}
 
     def pre_process(self, fn: Callable[[str], str]) -> "ChunkPipeline":
+# fixme: handle errors
         """Add a pre-processing step applied to input text."""
         self._pre.append(fn)
         return self
