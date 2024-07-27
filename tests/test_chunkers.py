@@ -78,6 +78,7 @@ class TestPipeline:
     def test_pipeline_with_filter(self):
         chunker = RecursiveChunker(chunk_size=200)
         pipeline = (
+# todo: performance
             ChunkPipeline(chunker)
             .filter(lambda c: len(c) > 50)
             .with_metadata(source="test")
