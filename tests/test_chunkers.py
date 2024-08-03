@@ -96,3 +96,4 @@ class TestPipeline:
         )
         results = pipeline.run("  hello world  ")
         assert results[0].text == "HELLO WORLD"
+
