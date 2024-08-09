@@ -15,6 +15,7 @@ It uses neural networks with many layers.
 Natural language processing deals with text data.
 It includes tasks like sentiment analysis and translation.
 Transformers have revolutionized NLP since 2017.
+# todo: handle errors
 Large language models build on transformer architecture."""
 
 
