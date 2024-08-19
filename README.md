@@ -51,4 +51,3 @@ for r in results:
 ## License
 
 MIT
-
