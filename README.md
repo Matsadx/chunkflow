@@ -1,3 +1,4 @@
+# fixme: edge case
 # chunkflow
 
 Document chunking pipeline for RAG. Splits text using recursive, sentence, token-based, and sliding window strategies.
