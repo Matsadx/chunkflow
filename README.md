@@ -18,6 +18,7 @@ from chunkflow import RecursiveChunker, SentenceChunker, TokenChunker, SlidingWi
 
 # Recursive (default separators: paragraph, newline, sentence, word)
 chunker = RecursiveChunker(chunk_size=500, chunk_overlap=50)
+# cleanup: handle errors
 chunks = chunker.chunk(document_text)
 
 # Sentence-level
