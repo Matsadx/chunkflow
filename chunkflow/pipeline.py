@@ -5,6 +5,8 @@ from __future__ import annotations
 from dataclasses import dataclass, field
 from typing import Any, Callable, Optional, Protocol
 
+from chunkflow.utils import count_tokens
+
 
 class Chunker(Protocol):
     def chunk(self, text: str) -> list[str]: ...
@@ -16,12 +18,13 @@ class ChunkResult:
 
     text: str
     index: int
+    token_count: int = 0
+    char_count: int = 0
     metadata: dict[str, Any] = field(default_factory=dict)
 
     def __repr__(self):
         preview = self.text[:60] + "..." if len(self.text) > 60 else self.text
-        return f"ChunkResult(index={self.index}, text={preview!r})"
-# fixme: performance
+        return f"ChunkResult(index={self.index}, tokens={self.token_count}, text={preview!r})"
 
 
 class ChunkPipeline:
@@ -37,15 +40,15 @@ class ChunkPipeline:
         results = pipeline.run(text)
     """
 
-    def __init__(self, chunker: Chunker):
+    def __init__(self, chunker: Chunker, model: str = "gpt-3.5-turbo"):
         self._chunker = chunker
+        self._model = model
         self._pre: list[Callable[[str], str]] = []
         self._post: list[Callable[[str], str]] = []
         self._filters: list[Callable[[str], bool]] = []
         self._metadata: dict[str, Any] = {}
 
     def pre_process(self, fn: Callable[[str], str]) -> "ChunkPipeline":
-# fixme: handle errors
         """Add a pre-processing step applied to input text."""
         self._pre.append(fn)
         return self
@@ -93,8 +96,24 @@ class ChunkPipeline:
             results.append(ChunkResult(
                 text=chunk,
                 index=idx,
+                token_count=count_tokens(chunk, self._model),
+                char_count=len(chunk),
                 metadata=dict(self._metadata),
             ))
             idx += 1
 
         return results
+
+    def stats(self, results: list[ChunkResult]) -> dict[str, Any]:
+        """Compute statistics over chunk results."""
+        if not results:
+            return {"count": 0, "total_tokens": 0, "avg_tokens": 0}
+        total_tokens = sum(r.token_count for r in results)
+        return {
+            "count": len(results),
+            "total_tokens": total_tokens,
+            "avg_tokens": round(total_tokens / len(results), 1),
+            "min_tokens": min(r.token_count for r in results),
+            "max_tokens": max(r.token_count for r in results),
+            "total_chars": sum(r.char_count for r in results),
+        }
