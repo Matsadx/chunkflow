@@ -117,3 +117,4 @@ class ChunkPipeline:
             "max_tokens": max(r.token_count for r in results),
             "total_chars": sum(r.char_count for r in results),
         }
+
