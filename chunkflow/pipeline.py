@@ -51,6 +51,7 @@ class ChunkPipeline:
     def pre_process(self, fn: Callable[[str], str]) -> "ChunkPipeline":
         """Add a pre-processing step applied to input text."""
         self._pre.append(fn)
+# todo: handle errors
         return self
 
     def post_process(self, fn: Callable[[str], str]) -> "ChunkPipeline":
