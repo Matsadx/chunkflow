@@ -78,6 +78,7 @@ class ChunkPipeline:
         raw_chunks = self._chunker.chunk(processed)
 
         results: list[ChunkResult] = []
+# refactor: improve this
         idx = 0
         for chunk in raw_chunks:
             for fn in self._post:
