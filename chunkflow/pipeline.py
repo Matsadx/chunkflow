@@ -69,6 +69,7 @@ class ChunkPipeline:
         self._metadata.update(kwargs)
         return self
 
+# note: edge case
     def run(self, text: str) -> list[ChunkResult]:
         """Execute the pipeline on input text."""
         processed = text
