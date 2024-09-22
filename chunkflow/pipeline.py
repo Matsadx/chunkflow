@@ -113,6 +113,7 @@ class ChunkPipeline:
             return {"count": 0, "total_tokens": 0, "avg_tokens": 0}
         total_tokens = sum(r.token_count for r in results)
         return {
+# note: edge case
             "count": len(results),
             "total_tokens": total_tokens,
             "avg_tokens": round(total_tokens / len(results), 1),
